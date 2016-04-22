@@ -22,6 +22,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <title>Eli Verbrugge</title>
 
 
+
   <!-- Place favicon.ico in the `app/` directory -->
 
   <!-- Chrome for Android theme color -->
@@ -61,6 +62,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
   <!-- For shared styles, shared-styles.html import in elements.html -->
   <style is="custom-style" include="shared-styles"></style>
+</head>
 <body unresolved>
   <!-- build:remove -->
   <span id="browser-sync-binding"></span>
@@ -68,139 +70,78 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
   <template is="dom-bind" id="app">
 
-    <paper-drawer-panel id="paperDrawerPanel" responsive-width="840px">
-      <!-- Drawer Scroll Header Panel -->
-      <paper-scroll-header-panel drawer fixed>
-
-        <!-- Drawer Toolbar -->
-        <paper-toolbar id="drawerToolbar">
-          <span class="menu-name">Menu</span>
-        </paper-toolbar>
-
-        <!-- Drawer Content -->
-        <paper-menu class="app-menu" attr-for-selected="data-route" selected="[[route]]">
-          <a data-route="home" href="{{baseUrl}}">
-            <iron-icon icon="home"></iron-icon>
-            <span>Home</span>
-          </a>
-
-          <a data-route="users" href="{{baseUrl}}users">
-            <iron-icon icon="info"></iron-icon>
-            <span>Users</span>
-          </a>
-
-          <a data-route="contact" href="{{baseUrl}}contact">
-            <iron-icon icon="mail"></iron-icon>
-            <span>Contact</span>
-          </a>
-        </paper-menu>
-      </paper-scroll-header-panel>
-
-      <!-- Main Area -->
+       <!-- Main Area -->
       <paper-scroll-header-panel main id="headerPanelMain" condenses keep-condensed-header>
         <!-- Main Toolbar -->
         <paper-toolbar id="mainToolbar" class="tall">
-          <paper-icon-button id="paperToggle" icon="menu" paper-drawer-toggle></paper-icon-button>
+
 
           <span class="space"></span>
 
           <!-- Application name -->
           <div class="middle middle-container">
-            <div class="app-name">Polymer Starter Kit</div>
+            <div class="app-name">Eli Verbrugge</div>
           </div>
 
           <!-- Application sub title -->
           <div class="bottom bottom-container">
-            <div class="bottom-title">The future of the web today</div>
+            <div class="bottom-title">Portfolio and general information built using the Polymer framework</div>
           </div>
         </paper-toolbar>
 
         <!-- Main Content -->
         <div class="content">
-          <iron-pages attr-for-selected="data-route" selected="{{route}}">
+
             <section data-route="home">
               <paper-material elevation="1">
-                <my-greeting class="focus-target" tabindex="-1"></my-greeting>
+                
+		<paper-toolbar class="red">
+  		<span class="title">Introduction</span>
+		</paper-toolbar>
+		
 
-                <p class="subhead">You now have:</p>
-                <my-list></my-list>
+		<p>This is a simple website talking about me and some of the projects I have worked on/am working on currently.<p>
 
-                <p>Looking for more Web App layouts? Check out our <a href="https://github.com/PolymerElements/app-layout-templates">layouts</a> collection. You can also <a href="http://polymerelements.github.io/app-layout-templates/">preview</a> them live.</p>
-              </paper-material>
+		<p> I am an avid tech enthusiast and have been tinkering with Arduino, Linux and Git for a while, along with some other programming projects that I have done.<p>
 
-              <paper-material elevation="1">
-                <p>This is another card.</p>
-              </paper-material>
+		<p>I also enjoy taking part in technology related activities and outreach events with my robotics team such as Scoutbotics, in which me and members from my robotics team volunteered for a scouting event which helped 60 scouts assemble and run some basic robotic kits. I helped trouble shoot some of the basic software issues.</p>
 
-              <paper-material elevation="1">
-                <h2 id="license">License</h2>
-                <p>Everything in this repo is BSD style license unless otherwise specified.</p>
-                <p>Copyright (c) 2015 The Polymer Authors. All rights reserved.</p>
-                <p>Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:</p>
-                <ul>
-                <li>Redistributions of source code must retain the above copyright
-                notice, this list of conditions and the following disclaimer.</li>
-                <li>Redistributions in binary form must reproduce the above
-                copyright notice, this list of conditions and the following disclaimer
-                in the documentation and/or other materials provided with the
-                distribution.</li>
-                <li>Neither the name of Google Inc. nor the names of its
-                contributors may be used to endorse or promote products derived from
-                this software without specific prior written permission.</li>
-                </ul>
-                <p>THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</p>
-              </paper-material>
-            </section>
+	
+	        </paper-material>
+	        </paper-material>
 
-            <section data-route="users">
-              <paper-material elevation="1">
-                <h1 class="page-title focus-target" tabindex="-1">Users</h1>
-                <p>This is the users section</p>
-                <a href$="{{baseUrl}}users/Addy">Addy</a><br>
-                <a href$="{{baseUrl}}users/Rob">Rob</a><br>
-                <a href$="{{baseUrl}}users/Chuck">Chuck</a><br>
-                <a href$="{{baseUrl}}users/Sam">Sam</a>
-              </paper-material>
-            </section>
+		<paper-material elevation="1">
+		<paper-toolbar class="red">
+  		<span class="title">Projects</span>
+		</paper-toolbar>
+		<p></p>
+		<paper-toolbar class="tall" style="height: 100px">
+  		<paper-tabs selected="{{selected}}" class="bottom self-end" style="width: 400px;">
+    			<paper-tab>Build-a-Bohr</paper-tab>
+    			<paper-tab>Robotics</paper-tab>
+    			<paper-tab>Codeday Competition</paper-tab>
+    			<paper-tab>Website</paper-tab>
+  		</paper-tabs>
+		</paper-toolbar>
+	
+		<iron-pages selected="{{selected}}">
+  		<div>
+   			<p>(WIP) A radioactive decay simulator built in Unity for a teacher of mine. Available at: https://github.com/build-a-bohr/build-a-bohr</p>
+   			<img src="images/Build-a-Bohr.png" alt="Build-a-Bohr"> 
+  		</div>
+  		<div>
+			<p>I wrote code in Android Studio for our FTC Robot at Kirkwood High School.</p>
+   			<img src="images/Android.png" alt="Robotics"> </div>
+  		<div>
 
-            <section data-route="user-info">
-              <paper-material elevation="1">
-                <h1 class="page-title focus-target" tabindex="-1">User: {{params.name}}</h1>
-                <div>This is {{params.name}}'s section</div>
-              </paper-material>
-            </section>
-
-            <section data-route="contact">
-              <paper-material elevation="1">
-                <h1 class="page-title focus-target" tabindex="-1">Contact</h1>
-                <p>This is the contact section</p>
-              </paper-material>
-            </section>
-          </iron-pages>
-        </div>
-      </paper-scroll-header-panel>
-    </paper-drawer-panel>
-
-    <paper-toast id="toast">
-      <span class="toast-hide-button" role="button" tabindex="0" onclick="app.$.toast.hide()">Ok</span>
-    </paper-toast>
-
-    <!-- Uncomment next block to enable Service Worker support (1/2) -->
-    <!--
-    <paper-toast id="caching-complete"
-                 duration="6000"
-                 text="Caching complete! This app will work offline.">
-    </paper-toast>
-    <platinum-sw-register auto-register
-                          clients-claim
-                          skip-waiting
-                          base-uri="bower_components/platinum-sw/bootstrap"
-                          on-service-worker-installed="displayInstalledToast">
-      <platinum-sw-cache default-cache-strategy="fastest"
-                         cache-config-file="cache-config.json">
-      </platinum-sw-cache>
-    </platinum-sw-register>
-    -->
+			<p>A simple collection of multiple mini-games made in Unity during a 24 hour hackathon. Source code available at: https://github.com/EliVerbrugge/Codeday-2015-<p>
+			<p>This particular project helped teach me a lot about some programming concepts but also taught me more well rounded group work as I teamed up with an artist who I had never encountered previous to the event.<p>
+			<p>We ended up winning the trophy for best overall project.</p>
+		</div>
+  		<div>
+			<p>I introduced myself to some basic concepts of the polymer web framework and along with github pages set about making a basic website/portfolio.</p>
+		</div>
+		</iron-pages>
 
   </template>
 
